@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAE8BE40-AC76-43C4-898A-E4C1D2FA6C36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yoga.VisionMix</RootNamespace>
+    <AssemblyName>VisionMix</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet, Version=13.0.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\MVTec\HALCON-13.0\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yoga.Wrapper, Version=1.0.6767.28529, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Yoga.Wrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppManger\AppInterlockHelper.cs" />
+    <Compile Include="AppManger\ProjectData.cs" />
+    <Compile Include="Frame\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frame\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\frmCommSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frame\frmCommSetting.Designer.cs">
+      <DependentUpon>frmCommSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frame\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frame\frmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\frmProjectManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frame\frmProjectManger.Designer.cs">
+      <DependentUpon>frmProjectManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\frmRegistered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frame\frmRegistered.Designer.cs">
+      <DependentUpon>frmRegistered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppManger\IniStatus.cs" />
+    <Compile Include="PLC\PanasonicPLCComm.cs" />
+    <Compile Include="PLC\PanasonicSerial.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppManger\StatusManger.cs" />
+    <Compile Include="Scheduling\UpdateUI.cs" />
+    <Compile Include="Units\AutoUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\AutoUnit.Designer.cs">
+      <DependentUpon>AutoUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\CameraShow.cs" />
+    <Compile Include="Units\DockUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\DockUnit.Designer.cs">
+      <DependentUpon>DockUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\IOUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\IOUnit.Designer.cs">
+      <DependentUpon>IOUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduling\RunTheadData.cs" />
+    <Compile Include="Units\SysConfigUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\SysConfigUnit.Designer.cs">
+      <DependentUpon>SysConfigUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\ToolDgv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\ToolDgv.Designer.cs">
+      <DependentUpon>ToolDgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\TopInfoUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\TopInfoUnit.Designer.cs">
+      <DependentUpon>TopInfoUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppManger\UserSetting.cs" />
+    <EmbeddedResource Include="Frame\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frame\frmCommSetting.resx">
+      <DependentUpon>frmCommSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frame\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frame\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frame\frmProjectManger.resx">
+      <DependentUpon>frmProjectManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frame\frmRegistered.resx">
+      <DependentUpon>frmRegistered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Units\AutoUnit.resx">
+      <DependentUpon>AutoUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\DockUnit.resx">
+      <DependentUpon>DockUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\IOUnit.resx">
+      <DependentUpon>IOUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\SysConfigUnit.resx">
+      <DependentUpon>SysConfigUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\ToolDgv.resx">
+      <DependentUpon>ToolDgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\TopInfoUnit.resx">
+      <DependentUpon>TopInfoUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yoga.Camera\Yoga.Camera.csproj">
+      <Project>{306083da-d250-4b6d-a487-f684f4330c0d}</Project>
+      <Name>Yoga.Camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.Common\Yoga.Common.csproj">
+      <Project>{c42f352e-f4f1-43b8-aeda-812a1ca2cf8a}</Project>
+      <Name>Yoga.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.ImageControl\Yoga.ImageControl.csproj">
+      <Project>{34ddafed-be60-4a7d-b438-c8eb74a3d1f7}</Project>
+      <Name>Yoga.ImageControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.Tools\Yoga.Tools.csproj">
+      <Project>{205d289c-64f9-4b9c-bf5f-0327152ea14a}</Project>
+      <Name>Yoga.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\Setting.png" />
+    <None Include="Resources\saveProject.png" />
+    <None Include="Resources\saveprj.png" />
+    <None Include="Resources\saveAs.png" />
+    <None Include="Resources\openPrj.png" />
+    <None Include="Resources\openImg.png" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

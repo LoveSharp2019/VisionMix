@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{205D289C-64F9-4B9C-BF5F-0327152EA14A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yoga.Tools</RootNamespace>
+    <AssemblyName>Yoga.Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\..\..\..\Program Files\MVTec\HALCON-13.0\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateImage\CreateImageTool.cs" />
+    <Compile Include="CreateImage\CreateImageUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateImage\CreateImageUnit.Designer.cs">
+      <DependentUpon>CreateImageUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\AllInterface.cs" />
+    <Compile Include="Factory\frmSelectCameraIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\frmSelectCameraIndex.Designer.cs">
+      <DependentUpon>frmSelectCameraIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\frmToolSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\frmToolSelect.Designer.cs">
+      <DependentUpon>frmToolSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\frmToolSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\frmToolSetting.Designer.cs">
+      <DependentUpon>frmToolSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Mat2DManger.cs" />
+    <Compile Include="Factory\Mat2DMangerUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Factory\Mat2DMangerUnit.Designer.cs">
+      <DependentUpon>Mat2DMangerUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\PointD.cs" />
+    <Compile Include="Factory\RunStatus.cs" />
+    <Compile Include="Factory\SacleImagePretreatment.cs" />
+    <Compile Include="Factory\SacleImagePretreatmentUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Factory\SacleImagePretreatmentUnit.Designer.cs">
+      <DependentUpon>SacleImagePretreatmentUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\SettingThread.cs" />
+    <Compile Include="Factory\ToolBase.cs" />
+    <Compile Include="Factory\ToolReflection.cs" />
+    <Compile Include="Factory\ToolsFactory.cs" />
+    <Compile Include="Factory\ToolShowUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Factory\ToolShowUnit.Designer.cs">
+      <DependentUpon>ToolShowUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\ToolsSettingUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Factory\ToolsSettingUnit.Designer.cs">
+      <DependentUpon>ToolsSettingUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\ToolVbaFun.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CreateImage\CreateImageUnit.resx">
+      <DependentUpon>CreateImageUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\frmSelectCameraIndex.resx">
+      <DependentUpon>frmSelectCameraIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\frmToolSelect.resx">
+      <DependentUpon>frmToolSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\frmToolSetting.resx">
+      <DependentUpon>frmToolSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Mat2DMangerUnit.resx">
+      <DependentUpon>Mat2DMangerUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\SacleImagePretreatmentUnit.resx">
+      <DependentUpon>SacleImagePretreatmentUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\ToolShowUnit.resx">
+      <DependentUpon>ToolShowUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\ToolsSettingUnit.resx">
+      <DependentUpon>ToolsSettingUnit.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yoga.Camera\Yoga.Camera.csproj">
+      <Project>{306083da-d250-4b6d-a487-f684f4330c0d}</Project>
+      <Name>Yoga.Camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.Common\Yoga.Common.csproj">
+      <Project>{c42f352e-f4f1-43b8-aeda-812a1ca2cf8a}</Project>
+      <Name>Yoga.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.ImageControl\Yoga.ImageControl.csproj">
+      <Project>{34ddafed-be60-4a7d-b438-c8eb74a3d1f7}</Project>
+      <Name>Yoga.ImageControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB30C904-3CE7-4704-AB3F-7EB602C6ED29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yoga.Tools</RootNamespace>
+    <AssemblyName>Yoga.Tools.Util</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\PlugIns\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\bin\Release\PlugIns\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet, Version=13.0.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yoga.Wrapper">
+      <HintPath>..\..\bin\Debug\Yoga.Wrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AngleFind\AngleFindTool.cs" />
+    <Compile Include="AngleFind\AngleFindToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AngleFind\AngleFindToolUnit.Designer.cs">
+      <DependentUpon>AngleFindToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calib9Point\Calib9PointTool.cs" />
+    <Compile Include="Calib9Point\Calib9PointToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Calib9Point\Calib9PointToolUnit.Designer.cs">
+      <DependentUpon>Calib9PointToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynThreshold\DynThresholdTool.cs" />
+    <Compile Include="DynThreshold\DynThresholdToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DynThreshold\DynThresholdToolUnit.Designer.cs">
+      <DependentUpon>DynThresholdToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtractColor\ExtractColorTool.cs" />
+    <Compile Include="ExtractColor\ExtractColorToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtractColor\ExtractColorToolUnit.Designer.cs">
+      <DependentUpon>ExtractColorToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metrology\FitlineTool.cs" />
+    <Compile Include="Metrology\MetrologyMessage.cs" />
+    <Compile Include="Metrology\MetrologyParam.cs" />
+    <Compile Include="Metrology\MetrologyResult.cs" />
+    <Compile Include="Metrology\MetrologyTool.cs" />
+    <Compile Include="Metrology\MetrologyToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Metrology\MetrologyToolUnit.Designer.cs">
+      <DependentUpon>MetrologyToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OcrHand\OcrHandTool.cs" />
+    <Compile Include="OcrHand\OcrHandToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OcrHand\OcrHandToolUnit.Designer.cs">
+      <DependentUpon>OcrHandToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\OcrPram.cs" />
+    <Compile Include="OCR\OCRTool.cs" />
+    <Compile Include="OCR\OCRToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OCR\OCRToolUnit.Designer.cs">
+      <DependentUpon>OCRToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaneFun\PlaneFun.cs" />
+    <Compile Include="PretreatImage\PretreatImageTool.cs" />
+    <Compile Include="PretreatImage\PretreatImageToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PretreatImage\PretreatImageToolUnit.Designer.cs">
+      <DependentUpon>PretreatImageToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheck\EnumInfo.cs" />
+    <Compile Include="PrintCheck\PrintCheckEventArgs.cs" />
+    <Compile Include="PrintCheck\PrintCheckTool.cs" />
+    <Compile Include="PrintCheck\PrintCheckToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrintCheck\PrintCheckToolUnit.Designer.cs">
+      <DependentUpon>PrintCheckToolUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VBA\VbaTool.cs" />
+    <Compile Include="VBA\VabToolUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VBA\VabToolUnit.Designer.cs">
+      <DependentUpon>VabToolUnit.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AngleFind\AngleFindToolUnit.resx">
+      <DependentUpon>AngleFindToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calib9Point\Calib9PointToolUnit.resx">
+      <DependentUpon>Calib9PointToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynThreshold\DynThresholdToolUnit.resx">
+      <DependentUpon>DynThresholdToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtractColor\ExtractColorToolUnit.resx">
+      <DependentUpon>ExtractColorToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metrology\MetrologyToolUnit.resx">
+      <DependentUpon>MetrologyToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OcrHand\OcrHandToolUnit.resx">
+      <DependentUpon>OcrHandToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCR\OCRToolUnit.resx">
+      <DependentUpon>OCRToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PretreatImage\PretreatImageToolUnit.resx">
+      <DependentUpon>PretreatImageToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCheck\PrintCheckToolUnit.resx">
+      <DependentUpon>PrintCheckToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VBA\VabToolUnit.resx">
+      <DependentUpon>VabToolUnit.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yoga.Common\Yoga.Common.csproj">
+      <Project>{c42f352e-f4f1-43b8-aeda-812a1ca2cf8a}</Project>
+      <Name>Yoga.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.ImageControl\Yoga.ImageControl.csproj">
+      <Project>{34ddafed-be60-4a7d-b438-c8eb74a3d1f7}</Project>
+      <Name>Yoga.ImageControl</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.Tools.Matching\Yoga.Tools.Matching.csproj">
+      <Project>{4480158a-e61e-4371-8809-8d585b93a341}</Project>
+      <Name>Yoga.Tools.Matching</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Yoga.Tools\Yoga.Tools.csproj">
+      <Project>{205d289c-64f9-4b9c-bf5f-0327152ea14a}</Project>
+      <Name>Yoga.Tools</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TextureInspection\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C42F352E-F4F1-43B8-AEDA-812A1CA2CF8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yoga.Common</RootNamespace>
+    <AssemblyName>Yoga.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\..\..\..\Program Files\MVTec\HALCON-13.0\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>.\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yoga.Wrapper, Version=1.0.6767.28529, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Yoga.Wrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\CommonJsonModel.cs" />
+    <Compile Include="Basic\CommunicationParam.cs" />
+    <Compile Include="Basic\GDI.cs" />
+    <Compile Include="Basic\ISerializeCheck.cs" />
+    <Compile Include="Basic\MessageQueue.cs" />
+    <Compile Include="Helpers\ImageWaterHelper.cs" />
+    <Compile Include="Helpers\IPHelper.cs" />
+    <Compile Include="Helpers\MessageHelper.cs" />
+    <Compile Include="Helpers\QueueHelper.cs" />
+    <Compile Include="Helpers\RegexHelper.cs" />
+    <Compile Include="Helpers\RegisterTool.cs" />
+    <Compile Include="Helpers\SerialHelper.cs" />
+    <Compile Include="Basic\frmImputText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmImputText.Designer.cs">
+      <DependentUpon>frmImputText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\SoftAuthorize.cs" />
+    <Compile Include="Basic\SoftBasic.cs" />
+    <Compile Include="Basic\StringResources.cs" />
+    <Compile Include="Helpers\ShareDataHelper.cs" />
+    <Compile Include="Helpers\StartupHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="ImageProcess\HImageExt.cs" />
+    <Compile Include="MotionControl\CommBase.cs" />
+    <Compile Include="MotionControl\DataAcquisition.cs" />
+    <Compile Include="MotionControl\GT400.cs" />
+    <Compile Include="MotionControl\GT400Comm.cs" />
+    <Compile Include="MotionControl\gts.cs" />
+    <Compile Include="MotionControl\GtsManger.cs" />
+    <Compile Include="MotionControl\GTSMoveCard.cs" />
+    <Compile Include="MotionControl\MoveCard.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="FileAct\CsvFiles.cs" />
+    <Compile Include="FileAct\FileManger.cs" />
+    <Compile Include="FileAct\INIOperation.cs" />
+    <Compile Include="FileAct\SerializationFile.cs" />
+    <Compile Include="Helpers\ApplicationHelper.cs" />
+    <Compile Include="Helpers\ScreenHelper.cs" />
+    <Compile Include="Helpers\WindowsHelper.cs" />
+    <Compile Include="Basic\MessageEventArgs.cs" />
+    <Compile Include="PrinterHelper\IPrinter.cs" />
+    <Compile Include="PrinterHelper\Printer.cs" />
+    <Compile Include="PrinterHelper\PrinterFactory.cs" />
+    <Compile Include="PrinterHelper\PrintQueueHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\RegisterHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TCPHelper\Coder.cs" />
+    <Compile Include="TCPHelper\DatagramResolver.cs" />
+    <Compile Include="TCPHelper\NetEventArgs.cs" />
+    <Compile Include="TCPHelper\Session.cs" />
+    <Compile Include="TCPHelper\SessionId.cs" />
+    <Compile Include="TCPHelper\TCPClientHelper.cs" />
+    <Compile Include="TCPHelper\TCPServerHelper.cs" />
+    <Compile Include="UI\AgileProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AgileProgressBar.Designer.cs">
+      <DependentUpon>AgileProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmLoad.Designer.cs">
+      <DependentUpon>FrmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmWaitingBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmWaitingBox.Designer.cs">
+      <DependentUpon>frmWaitingBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IpTextBoxExt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\IpTextBoxExt.Designer.cs">
+      <DependentUpon>IpTextBoxExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SevenSegment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SevenSegment.Designer.cs">
+      <DependentUpon>SevenSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SevenSegmentArray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SevenSegmentArray.Designer.cs">
+      <DependentUpon>SevenSegmentArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VBAEngine\AutofillText.cs" />
+    <Compile Include="VBAEngine\HotKeyManager.cs" />
+    <Compile Include="VBAEngine\SearchManager.cs" />
+    <Compile Include="VBAEngine\VbaEditBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VBAEngine\VbaEditBox.Designer.cs">
+      <DependentUpon>VbaEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="VBAEngine\GlobalObject.cs" />
+    <Compile Include="VBAEngine\VbaFunction.cs" />
+    <Compile Include="VBAEngine\XVBAEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Basic\frmImputText.resx">
+      <DependentUpon>frmImputText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AgileProgressBar.resx">
+      <DependentUpon>AgileProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmLoad.resx">
+      <DependentUpon>FrmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmWaitingBox.resx">
+      <DependentUpon>frmWaitingBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IpTextBoxExt.resx">
+      <DependentUpon>IpTextBoxExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VBAEngine\VbaEditBox.resx">
+      <DependentUpon>VbaEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\waiting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_return.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
